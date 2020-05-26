@@ -12,3 +12,9 @@ Homebrew で eksctl を入れれば kubectl も一緒に入る。
 brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl
 ```
+
+## クラスタ作成
+
+```sh
+eksctl create cluster -f cluster.yml
+```

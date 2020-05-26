@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: try-aws-eks
+  region: ap-northeast-1
+  tags:
+    try-aws-eks:tag1: tag1
+    try-aws-eks:tag2: tag2
+
+fargateProfiles:
+  - name: fp-default
+    selectors:
+      - namespace: default
+      - namespace: kube-system
