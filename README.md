@@ -32,6 +32,12 @@ aws iam create-policy \
 eksctl create cluster -f cluster.yml
 ```
 
+クラスタロール, クラスタロールバインディングを作成。  
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/rbac-role.yaml
+```
+
 ## クラスタ 削除
 
 後始末。  
