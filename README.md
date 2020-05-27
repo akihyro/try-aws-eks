@@ -38,6 +38,24 @@ eksctl create cluster -f cluster.yml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/rbac-role.yaml
 ```
 
+ALB Ingress Controller をデプロイ。  
+`--cluster-name`, `--aws-vpc-id`, `--aws-region` を追加。  
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/alb-ingress-controller.yaml
+kubectl edit deployment.apps/alb-ingress-controller -n kube-system
+```
+
+```yml
+spec:
+  containers:
+  - args:
+    - --ingress-class=alb
+    - --cluster-name=try-aws-eks
+    - --aws-vpc-id=vpc-XXXXXXXXXXXXXXXXX
+    - --aws-region=ap-northeast-1
+```
+
 ## クラスタ 削除
 
 後始末。  
