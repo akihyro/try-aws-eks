@@ -56,6 +56,18 @@ spec:
     - --aws-region=ap-northeast-1
 ```
 
+nginx をデプロイ。  
+
+```sh
+kubectl apply -f nginx.yml
+```
+
+ingress の ADDRESS:PORT にアクセスすれば nginx の画面が表示されるはず。  
+
+```sh
+kubectl get ingress
+```
+
 ## クラスタ 削除
 
 後始末。  
