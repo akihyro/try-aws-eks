@@ -18,3 +18,9 @@ brew install weaveworks/tap/eksctl
 ```sh
 eksctl create cluster -f cluster.yml
 ```
+
+## クラスタ削除
+
+```sh
+eksctl delete cluster -f cluster.yml -w
+```
