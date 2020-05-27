@@ -1,7 +1,7 @@
-# try-aws-eks
+# try-aws-eks-on-fargate
 
-AWS EKS を試してみる。  
-EKS on Fargate で nginx サーバを起動してみる。  
+AWS EKS on Fargate を試してみる。  
+nginx サーバを雑に起動してみる。  
 
 ## ツール インストール
 
