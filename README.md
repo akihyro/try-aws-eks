@@ -15,11 +15,17 @@ brew install weaveworks/tap/eksctl
 
 ## クラスタ作成
 
+クラスタを作成。  
+10〜20分くらいかかる。  
+
 ```sh
 eksctl create cluster -f cluster.yml
 ```
 
 ## クラスタ削除
+
+後始末。  
+10〜20分くらいかかる。  
 
 ```sh
 eksctl delete cluster -f cluster.yml -w
