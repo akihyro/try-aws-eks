@@ -8,6 +8,15 @@ metadata:
     try-aws-eks:cluster-tag1: cluster-tag1
     try-aws-eks:cluster-tag2: cluster-tag2
 
+iam:
+  withOIDC: true
+  serviceAccounts:
+    - metadata:
+        name: alb-ingress-controller
+        namespace: kube-system
+      attachPolicyARNs:
+        - arn:aws:iam::XXXXXXXXXXXX:policy/ALBIngressControllerIAMPolicy
+
 fargateProfiles:
   - name: fp-default
     selectors:
