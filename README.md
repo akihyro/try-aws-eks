@@ -81,5 +81,6 @@ kubectl apply -f nginx.yml
 10〜20分くらいかかる。  
 
 ```sh
+kubectl delete ingress nginx-ingress
 eksctl delete cluster -f cluster.yml -w
 ```
