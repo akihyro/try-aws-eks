@@ -68,6 +68,13 @@ ingress の ADDRESS:PORT にアクセスすれば nginx の画面が表示され
 kubectl get ingress
 ```
 
+ALB のリスナーが追加されない場合は ingress を再デプロイするといける。  
+
+```sh
+kubectl delete ingress nginx-ingress
+kubectl apply -f nginx.yml
+```
+
 ## クラスタ 削除
 
 後始末。  
